@@ -27,6 +27,8 @@ let batchSize = 12, globalQueue = [], state = 'idle';
 let waitingClassic = false, totalCorrect = 0, lastAskedClassicCard = null, lastConfirmedPeriod = null;
 let loadedFileName = '', speechEnabled = true, musicEnabled = true, useFlashcards = true, delayedControlsTimer = null;
 let errorStats = {}; // { word: { mc: 0, classic: 0 } }
+let isProcessingAnswer = false;
+let hasStartedSession = false;
 
 const fileInput = document.getElementById('file'), fileLabel = document.getElementById('fileLabel');
 const periyotSel = document.getElementById('periyot'), langSel = document.getElementById('lang');
@@ -177,7 +179,7 @@ function setStudyControlsVisible(v) {
 }
 
 function setStartButtonLabel() {
-    startBtn.textContent = state === 'idle' ? 'Start' : 'Restart';
+    startBtn.textContent = hasStartedSession ? 'Restart' : 'Start';
 }
 
 function langName() {
@@ -252,6 +254,8 @@ function hardReset() {
     errorStats = {};
     state = 'idle';
     waitingClassic = false;
+    isProcessingAnswer = false;
+    hasStartedSession = false;
     totalCorrect = 0;
     lastAskedClassicCard = null;
     lastConfirmedPeriod = null;
@@ -301,6 +305,8 @@ function beginStudy() {
     errorStats = {}; // Reset error statistics on start
     
     waitingClassic = false;
+    isProcessingAnswer = false;
+    hasStartedSession = true;
     lastAskedClassicCard = null;
     lastConfirmedPeriod = batchSize;
     
@@ -319,6 +325,11 @@ function beginStudy() {
 fileInput.addEventListener('change', e => {
     const f = e.target.files[0];
     if (!f) return;
+    if (!f.name.toLowerCase().endsWith('.txt')) {
+        progress.textContent = 'Invalid file format. Please select a .txt file.';
+        fileInput.value = '';
+        return;
+    }
     loadedFileName = f.name;
     const r = new FileReader();
     r.onload = ev => {
@@ -570,6 +581,7 @@ continueBtn.addEventListener('click', () => {
 
 // Classic Phase (Sequential, error gets added to back of classicQueue)
 function renderClassic() {
+    isProcessingAnswer = false;
     if (delayedControlsTimer) clearTimeout(delayedControlsTimer);
     if (classicQueue.length === 0) {
         if (globalQueue.length > 0) {
@@ -597,17 +609,20 @@ function renderClassic() {
 }
 
 checkTyped.addEventListener('click', () => {
-    if (state !== 'classic' || waitingClassic) return;
+    if (state !== 'classic' || waitingClassic || isProcessingAnswer) return;
     const a = typed.value.trim();
     if (!a) {
         resultEl.textContent = 'Please type something.';
         return;
     }
+    if (classicQueue.length === 0) return;
+
     const c = classicQueue.shift();
     const isLastClassicInBatch = classicQueue.length === 0;
     const isLastBatch = globalQueue.length === 0;
     
     if (a.toLowerCase() === c.word.toLowerCase()) {
+        isProcessingAnswer = true;
         stopSpeech();
         resultEl.textContent = 'Correct!';
         totalCorrect++;
