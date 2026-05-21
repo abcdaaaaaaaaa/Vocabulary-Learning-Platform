@@ -73,12 +73,22 @@ function stopAllAudio() {
 }
 
 function updateSpeechVisibility() {
-    if (langSel.value === 'none') {
-        speechSwitch.checked = false;
-        speechEnabled = false;
-        speechSwitch.parentElement.style.display = 'none';
-    } else {
+    if (state === 'idle') {
+        flashcardSwitch.parentElement.style.display = 'inline-flex';
+        speechSwitch.parentElement.style.display = langSel.value === 'none' ? 'none' : 'inline-flex';
+        musicSwitch.parentElement.style.display = 'inline-flex';
+    } else if (state === 'flashcard') {
+        flashcardSwitch.parentElement.style.display = 'inline-flex';
         speechSwitch.parentElement.style.display = 'inline-flex';
+        musicSwitch.parentElement.style.display = 'inline-flex';
+    } else if (state === 'mc') {
+        flashcardSwitch.parentElement.style.display = 'none';
+        speechSwitch.parentElement.style.display = 'inline-flex';
+        musicSwitch.parentElement.style.display = 'inline-flex';
+    } else if (state === 'classic') {
+        flashcardSwitch.parentElement.style.display = 'none';
+        speechSwitch.parentElement.style.display = 'none';
+        musicSwitch.parentElement.style.display = 'inline-flex';
     }
     updateSwitchBoxLayout();
 }
@@ -372,11 +382,10 @@ function displayFinalReport() {
     resultEl.textContent = '';
     counter.textContent = '';
     
-    if (langSel.value !== 'none') speechSwitch.parentElement.style.display = 'inline-flex';
     setStartButtonLabel();
     langSel.disabled = false;
     state = 'idle';
-    updateSwitchBoxLayout();
+    updateSpeechVisibility();
 
     // Generate detailed error report
     let reportHTML = `<div style="text-align: left; margin-top: 10px;">`;
@@ -428,6 +437,7 @@ function prepareNextBatch() {
         state = 'flashcard';
         quiz.style.display = 'none';
         flashcardArea.style.display = 'flex';
+        updateSpeechVisibility();
         renderFlashcard();
     } else {
         startQuizPhases();
@@ -485,9 +495,8 @@ function startQuizPhases() {
     state = 'mc';
     waitingClassic = false;
     lastAskedClassicCard = null;
-    speechSwitch.parentElement.style.display = langSel.value === 'none' ? 'none' : 'inline-flex';
-    updateSwitchBoxLayout();
     quiz.style.display = 'block';
+    updateSpeechVisibility();
     renderMC();
 }
 
@@ -495,8 +504,7 @@ function startQuizPhases() {
 function renderMC() {
     if (mcQueue.length === 0) {
         state = 'classic';
-        speechSwitch.parentElement.style.display = 'none';
-        updateSwitchBoxLayout();
+        updateSpeechVisibility();
         renderClassic();
         return;
     }
@@ -522,7 +530,7 @@ function renderMC() {
     correctBtn.style.display = 'none';
     continueBtn.style.display = 'none';
     counter.textContent = 'MC: ' + (currentBatch.indexOf(c) + 1) + '/' + currentBatch.length;
-    updateSwitchBoxLayout();
+    updateSpeechVisibility();
 }
 
 function handleMCAnswer(btn, ans, c) {
@@ -584,7 +592,7 @@ function renderClassic() {
     correctBtn.style.display = 'none';
     continueBtn.style.display = 'none';
     showDelayedControls();
-    updateSwitchBoxLayout();
+    updateSpeechVisibility();
     setTimeout(() => typed.focus(), 50);
 }
 
