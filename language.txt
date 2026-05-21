@@ -1,8 +1,11 @@
 one
 bir
+You can also use this word as one, someone, somebody, any, etc.
+I bought one apple.
 
 two
 iki
+I bought two apples.
 
 three
 üç
