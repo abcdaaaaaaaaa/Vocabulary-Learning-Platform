@@ -6,7 +6,7 @@ function parseText(txt) {
         if (lines.length >= 2) {
             const word = lines[0];
             const definition = lines[1];
-            const examples = lines.slice(2); // 3rd line and beyond are example sentences
+            const examples = lines.slice(2);
             cards.push({ word, definition, examples });
         }
     }
@@ -21,17 +21,16 @@ function shuffle(a) {
     return a;
 }
 
-// Global states, queues, and exact mistake tracking map
 let allCards = [], currentBatch = [], mcQueue = [], classicQueue = [], flashcardQueue = [];
 let batchSize = 12, globalQueue = [], state = 'idle'; 
 let waitingClassic = false, totalCorrect = 0, lastAskedClassicCard = null, lastConfirmedPeriod = null;
 let loadedFileName = '', speechEnabled = true, musicEnabled = true, useFlashcards = true, delayedControlsTimer = null;
-let errorStats = {}; // { word: { mc: 0, classic: 0 } }
+let errorStats = {};
 let isProcessingAnswer = false;
 let hasStartedSession = false;
 
 const fileInput = document.getElementById('file'), fileLabel = document.getElementById('fileLabel');
-const periyotSel = document.getElementById('periyot'), langSel = document.getElementById('lang');
+const periodSel = document.getElementById('period'), langSel = document.getElementById('lang');
 const startBtn = document.getElementById('start'), resetBtn = document.getElementById('reset');
 const progress = document.getElementById('progress'), quiz = document.getElementById('quiz');
 const definitionEl = document.getElementById('definition'), optionsEl = document.getElementById('options');
@@ -46,7 +45,6 @@ const correctSound = document.getElementById('correctSound');
 const finishBatchSound = document.getElementById('finishBatchSound');
 const finishAllSound = document.getElementById('finishAllSound');
 
-// Flashcard Area Elements
 const flashcardArea = document.getElementById('flashcardArea');
 const fcBox = document.getElementById('fcBox');
 const fcWord = document.getElementById('fcWord');
@@ -55,6 +53,24 @@ const fcDef = document.getElementById('fcDef');
 const fcExamples = document.getElementById('fcExamples');
 const fcNextBtn = document.getElementById('fcNextBtn');
 const fcInstruction = document.getElementById('fcInstruction');
+const wifiIcon = document.getElementById('wifiIcon');
+
+let isOnline = navigator.onLine;
+
+if (!isOnline) {
+    wifiIcon.style.display = 'inline-block';
+}
+
+window.addEventListener('online', () => {
+    isOnline = true;
+    wifiIcon.style.display = 'none';
+});
+
+window.addEventListener('offline', () => {
+    isOnline = false;
+    wifiIcon.style.display = 'inline-block';
+    stopSpeech();
+});
 
 function updateSwitchBoxLayout() {
     const v = [...switchBox.children].filter(e => e.style.display !== 'none');
@@ -75,23 +91,9 @@ function stopAllAudio() {
 }
 
 function updateSpeechVisibility() {
-    if (state === 'idle') {
-        flashcardSwitch.parentElement.style.display = 'inline-flex';
-        speechSwitch.parentElement.style.display = langSel.value === 'none' ? 'none' : 'inline-flex';
-        musicSwitch.parentElement.style.display = 'inline-flex';
-    } else if (state === 'flashcard') {
-        flashcardSwitch.parentElement.style.display = 'inline-flex';
-        speechSwitch.parentElement.style.display = 'inline-flex';
-        musicSwitch.parentElement.style.display = 'inline-flex';
-    } else if (state === 'mc') {
-        flashcardSwitch.parentElement.style.display = 'none';
-        speechSwitch.parentElement.style.display = 'inline-flex';
-        musicSwitch.parentElement.style.display = 'inline-flex';
-    } else if (state === 'classic') {
-        flashcardSwitch.parentElement.style.display = 'none';
-        speechSwitch.parentElement.style.display = 'none';
-        musicSwitch.parentElement.style.display = 'inline-flex';
-    }
+    flashcardSwitch.parentElement.style.display = 'inline-flex';
+    speechSwitch.parentElement.style.display = langSel.value === 'none' ? 'none' : 'inline-flex';
+    musicSwitch.parentElement.style.display = 'inline-flex';
     updateSwitchBoxLayout();
 }
 
@@ -126,8 +128,8 @@ function playSound(s) {
 }
 
 function speakWord(word) {
-    if (!speechEnabled) return;
-    if (state !== 'mc' && state !== 'flashcard') return; // Do not speak during other states
+    if (!speechEnabled || !isOnline) return;
+    if (state !== 'mc' && state !== 'flashcard') return;
     if (langSel.value === 'none') return;
     const lang = langSel.value;
     const utter = new SpeechSynthesisUtterance(word);
@@ -143,7 +145,7 @@ function speakWord(word) {
 }
 
 function getPeriod() { 
-    return parseInt(periyotSel.value, 10); 
+    return parseInt(periodSel.value, 10); 
 }
 
 function getDefaultPeriodByCount(c) {
@@ -152,7 +154,7 @@ function getDefaultPeriodByCount(c) {
 
 function applyDefaultPeriodByCount(c) {
     const p = getDefaultPeriodByCount(c);
-    periyotSel.value = String(p);
+    periodSel.value = String(p);
     lastConfirmedPeriod = p;
 }
 
@@ -171,11 +173,11 @@ function setFileInputVisible(v) {
 }
 
 function setStudyControlsVisible(v) {
-    periyotSel.style.display = v ? 'inline-block' : 'none';
+    periodSel.style.display = v ? 'inline-block' : 'none';
     langSel.style.display = v ? 'inline-block' : 'none';
     startBtn.style.display = v ? 'inline-block' : 'none';
     resetBtn.style.display = v ? 'inline-block' : 'none';
-    switchBox.style.display = v ? 'flex' : 'none'; // Switches are shown and adjustable before Start!
+    switchBox.style.display = v ? 'flex' : 'none';
 }
 
 function setStartButtonLabel() {
@@ -260,12 +262,18 @@ function hardReset() {
     lastAskedClassicCard = null;
     lastConfirmedPeriod = null;
     loadedFileName = '';
-    speechEnabled = true;
-    musicEnabled = true;
-    useFlashcards = true;
+    
+    flashcardSwitch.checked = true;
     speechSwitch.checked = true;
     musicSwitch.checked = true;
-    flashcardSwitch.checked = true;
+    
+    document.getElementById('themeSel').value = 'midnight';
+    document.documentElement.setAttribute('data-theme', 'midnight');
+    
+    useFlashcards = true;
+    speechEnabled = true;
+    musicEnabled = true;
+    
     quiz.style.display = 'none';
     flashcardArea.style.display = 'none';
     optionsEl.innerHTML = '';
@@ -279,7 +287,7 @@ function hardReset() {
     counter.textContent = '';
     definitionEl.textContent = '';
     fileInput.value = '';
-    periyotSel.value = '12';
+    periodSel.value = '12';
     langSel.value = 'en';
     switchBox.style.display = 'none';
     updateSpeechVisibility();
@@ -302,7 +310,7 @@ function beginStudy() {
     shuffle(allCards);
     batchSize = getPeriod();
     globalQueue = allCards.slice();
-    errorStats = {}; // Reset error statistics on start
+    errorStats = {};
     
     waitingClassic = false;
     isProcessingAnswer = false;
@@ -365,7 +373,7 @@ resetBtn.addEventListener('click', () => {
     if (ok) hardReset();
 });
 
-periyotSel.addEventListener('change', () => {
+periodSel.addEventListener('change', () => {
     const v = getPeriod();
     if (state === 'idle') {
         lastConfirmedPeriod = v;
@@ -375,7 +383,7 @@ periyotSel.addEventListener('change', () => {
     const ok = confirm('Changing the period will restart your session. Are you sure?');
     if (ok) beginStudy();
     else {
-        if (lastConfirmedPeriod != null) periyotSel.value = String(lastConfirmedPeriod);
+        if (lastConfirmedPeriod != null) periodSel.value = String(lastConfirmedPeriod);
         setRunningStatusText();
     }
 });
@@ -398,11 +406,9 @@ function displayFinalReport() {
     state = 'idle';
     updateSpeechVisibility();
 
-    // Generate detailed error report
     let reportHTML = `<div style="text-align: left; margin-top: 10px;">`;
     reportHTML += `<h2 style="font-size: 20px; color: var(--text-sec); text-align: center; margin-bottom: 15px;">Detailed Study Report</h2>`;
     
-    // Filter out words that have any errors recorded
     const errorWords = Object.keys(errorStats).filter(w => errorStats[w].mc > 0 || errorStats[w].classic > 0);
     
     if (errorWords.length === 0) {
@@ -451,11 +457,11 @@ function prepareNextBatch() {
         updateSpeechVisibility();
         renderFlashcard();
     } else {
+        flashcardArea.style.display = 'none';
         startQuizPhases();
     }
 }
 
-// Flashcard Mode Functions
 function renderFlashcard() {
     const c = flashcardQueue[0];
     fcWord.textContent = c.word;
@@ -477,7 +483,6 @@ function renderFlashcard() {
     fcInstruction.style.display = 'block';
     fcNextBtn.style.display = 'none';
     
-    // Only speak the main word in flashcard mode
     speakWord(c.word);
 }
 
@@ -491,7 +496,7 @@ fcBox.addEventListener('click', () => {
 
 fcNextBtn.addEventListener('click', () => {
     flashcardQueue.shift();
-    if (flashcardQueue.length > 0) {
+    if (flashcardQueue.length > 0 && useFlashcards) {
         renderFlashcard();
     } else {
         flashcardArea.style.display = 'none';
@@ -501,17 +506,17 @@ fcNextBtn.addEventListener('click', () => {
 
 function startQuizPhases() {
     mcQueue = currentBatch.slice();
-    shuffle(mcQueue); // MC is Shuffled
-    classicQueue = currentBatch.slice(); // Classic is asked in order (not shuffled)
+    shuffle(mcQueue);
+    classicQueue = currentBatch.slice();
     state = 'mc';
     waitingClassic = false;
     lastAskedClassicCard = null;
+    flashcardArea.style.display = 'none';
     quiz.style.display = 'block';
     updateSpeechVisibility();
     renderMC();
 }
 
-// Multiple Choice Phase (MC)
 function renderMC() {
     if (mcQueue.length === 0) {
         state = 'classic';
@@ -558,9 +563,9 @@ function handleMCAnswer(btn, ans, c) {
     } else {
         btn.classList.add('wrong');
         resultEl.textContent = 'Wrong. Correct: ' + c.definition;
-        recordMCError(c.word); // Register MC error
+        recordMCError(c.word);
         mcQueue.shift();
-        mcQueue.push(c); // Add back to try again later
+        mcQueue.push(c);
         continueBtn.style.display = 'inline-block';
         waitingClassic = true;
     }
@@ -579,7 +584,6 @@ continueBtn.addEventListener('click', () => {
     }
 });
 
-// Classic Phase (Sequential, error gets added to back of classicQueue)
 function renderClassic() {
     isProcessingAnswer = false;
     if (delayedControlsTimer) clearTimeout(delayedControlsTimer);
@@ -641,8 +645,8 @@ checkTyped.addEventListener('click', () => {
         setTimeout(() => renderClassic(), 400);
     } else {
         resultEl.textContent = 'Wrong. Correct: ' + c.word;
-        recordClassicError(c.word); // Register Classic error
-        classicQueue.push(c); // Error gets pushed to the end of classicQueue to be asked again
+        recordClassicError(c.word);
+        classicQueue.push(c);
         lastAskedClassicCard = c;
         waitingClassic = true;
         continueBtn.style.display = 'inline-block';
@@ -664,8 +668,8 @@ dontKnowBtn.addEventListener('click', () => {
         const c = classicQueue.shift();
         typed.value = c.word;
         resultEl.textContent = 'Correct: ' + c.word;
-        recordClassicError(c.word); // Register Classic error
-        classicQueue.push(c); // Pushed to end to learn again later
+        recordClassicError(c.word);
+        classicQueue.push(c);
         lastAskedClassicCard = c;
         writeArea.style.display = 'none';
         hintBtn.style.display = 'none';
@@ -678,7 +682,6 @@ dontKnowBtn.addEventListener('click', () => {
 
 correctBtn.addEventListener('click', () => {
     if (classicQueue.length > 0 && lastAskedClassicCard) {
-        // Decrement classic error counter for this card as user confirmed it was correct
         clearClassicError(lastAskedClassicCard.word);
         
         const i = classicQueue.indexOf(lastAskedClassicCard);
