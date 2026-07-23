@@ -1,0 +1,246 @@
+(1) The vintage Ferrari will be sold at an upcoming _. *auction → Create questions and answers in the language you want to learn. (Example: I wrote it in English because I want to learn English.)
+(1) The _ called for higher bids as the crowd cheered. *auctioneer → If you want to get different questions when you press the restart button after finishing the activity, you can increase the variety of questions. For example, since (1) is written 2 times here, the system will repeat after restarting 2 times.
+(2) She submitted a secret bid before the _ closed. *auction → Answers can be written as *answer1 after the asterisk (*) or as *answer1, answer2, answer(n) for multiple answers if the question contains more than one space.
+(2) The family decided to _ their estate to pay off debts. A rare manuscript was _ for millions at Sotheby's. *auction, auctioned → You can prepare the questions sentence by sentence or paragraph by paragraph.
+(3) They are going to _ all the old office equipment. *auction → Since the third question has only one alternative, the system will display this question every time it runs.
+(4) The painting was _ off to an anonymous buyer. *auctioned → In the activity, generate as many sentence numbers as you want for each word. For example, since this word is written up to number (4), the system will generate 4 different questions.
+(blank line) → Always leave one blank line before entering the next word
+(1) The mountain peak offers a _ view of the valley below. *spectacular
+(1) The new theatrical show succeeded _ across Europe. *spectacularly
+(1) We watched a _ display of northern lights last night. *spectacular
+(1) Her career took off _ after her debut movie. *spectacularly
+(1) The resort is famous for its _ oceanfront architecture. *spectacular
+(1) The event failed _, resulting in a total shutdown. *spectacularly
+(1) He scored a _ goal from thirty yards out. *spectacular
+
+(1) Make sure the lighting in the room is _ for reading. *adequate
+(1) The safety measures were not _ tested before launch. *adequately
+(1) Auditors questioned the _ of the firm's financial reserves. *adequacy
+(1) The current funding is _ to cover the huge costs. *inadequate
+(1) He gave an _ performance, though not an exceptional one. *adequate
+(1) The staff was _ trained to handle customer complaints. *adequately
+(1) She felt _ prepared for the difficult job interview. *inadequately
+
+(1) He grabbed a wooden _ and walked up to home plate. *bat
+(1) Nocturnal animals like the _ hunt insects at night. *bat
+(1) She decided to _ first in the softball game. *bat
+(1) The team's _ coach analyzed every player's swing. *batting
+(1) The cat _ playfully at the dangling string. *batted
+(1) A dark _ flew past the window in the twilight. *bat
+(1) He _ the ball high into the air for a pop fly. *batted
+
+(1) Clear goals help teams _ complex tasks on time. *accomplish
+(1) She is an _ pianist who has performed worldwide. *accomplished
+(1) Completing the marathon was a major personal _. *accomplishment
+(1) What do you hope to _ during this training session? *accomplish
+(1) He feels proud of his academic _ over the past year. *accomplishments
+(1) An _ surgeon performed the delicate operation. *accomplished
+(1) Together we can _ far more than we can alone. *accomplish
+
+(1) The plane made a soft _ on the rain-soaked runway. *landing
+(1) The flight will _ in Tokyo ahead of schedule. *land
+(1) The spacecraft _ safely on the surface of Mars. *landed
+(1) Passengers prepared for _ by fastening their seatbelts. *landing
+(1) A colorful parrot _ on the balcony railing. *landed
+(1) The pilot requested permission for an emergency _. *landing
+(1) We expect to _ at the international airport by noon. *land
+
+(1) Please leave a wide _ on the right side of the paper. *margin
+(1) The company reported a profit _ of fifteen percent. *margin
+(1) The new design offered only a _ improvement in speed. *marginal
+(1) Sales figures were _ higher than in the previous quarter. *marginally
+(1) The candidate won the election by a slim _. *margin
+(1) These extra notes belong in the _ of the document. *margin
+(1) The cost increase was _ and easily absorbed by the budget. *marginal
+
+(1) The guide provides a _ overview of digital marketing. *comprehensive
+(1) The audit team reviewed all transactions _. *comprehensively
+(1) The _ of the medical report left no questions unanswered. *comprehensiveness
+(1) Students received _ training before entering the field. *comprehensive
+(1) The subject was _ analyzed in the research paper. *comprehensively
+(1) We need a _ insurance plan that covers all risks. *comprehensive
+(1) The textbook stands out due to the _ of its scope. *comprehensiveness
+
+(1) The classical _ wrote his first opera at age twelve. *composer
+(1) She decided to _ a piece of music for the film score. *compose
+(1) He remained calm and _ during the intense debate. *composed
+(1) The teacher praised the student's elegant written _. *composition
+(1) Many famous _ lived in Vienna during the 19th century. *composers
+(1) It takes great skill to _ a full orchestra symphony. *compose
+(1) Her latest musical _ was performed by the philharmonic. *composition
+
+(1) Regular exercise helps maintain healthy _ flexibility. *joint
+(1) The two nations released a _ statement on climate policy. *joint
+(1) The project was developed _ by two university teams. *jointly
+(1) Arthritis causes painful inflammation in the human _. *joints
+(1) They own a _ bank account for household expenses. *joint
+(1) The book was written _ by two prominent historians. *jointly
+(1) Engineers inspected the welding _ on the steel bridge. *joint
+
+(1) The ancient temple is a _ piece of architecture. *magnificent
+(1) The orchestra played _ during the gala night. *magnificently
+(1) Visitors marveled at the _ of the royal palace gardens. *magnificence
+(1) The resort features a _ view of the surrounding mountains. *magnificent
+(1) She was _ dressed in an embroidered silk gown. *magnificently
+(1) The natural _ of the Grand Canyon attracts millions. *magnificence
+(1) He gave a _ speech that inspired the entire audience. *magnificent
+
+(1) The young scientist made a _ discovery in genetics. *remarkable
+(1) The patient made a _ fast recovery after treatment. *remarkably
+(1) She possesses a _ ability to solve complex puzzles. *remarkable
+(1) The weather remained _ mild throughout the winter. *remarkably
+(1) It is _ how much progress the team achieved in one week. *remarkable
+(1) He spoke _ fluent Spanish after living abroad for six months. *remarkably
+(1) The cathedral is a _ example of Gothic engineering. *remarkable
+
+(1) Practicing _ arts builds both discipline and strength. *martial
+(1) The government enforced _ law following the security crisis. *martial
+(1) The guards marched _ across the courtyard in unison. *martially
+(1) Traditional _ arts require years of dedicated training. *martial
+(1) The parade featured upbeat _ music played by the army band. *martial
+(1) The commander maintained a strict _ order in the camp. *martial
+(1) The soldiers were equipped _ for the tactical operation. *martially
+
+(1) Teachers try to _ game-based learning into lessons. *incorporate
+(1) The newly _ company opened its headquarters downtown. *incorporated
+(1) The legal _ process took several weeks to finalize. *incorporation
+(1) You should _ more fresh fruits into your diet. *incorporate
+(1) Small businesses often choose to become _. *incorporated
+(1) The document outlines the _ of environmental standards. *incorporation
+(1) The software will _ user feedback into the next update. *incorporate
+
+(1) The committee voted to _ the rule pending further review. *suspend
+(1) The driver received a six-month license _. *suspension
+(1) Dust particles remained _ in the air after the blast. *suspended
+(1) Officials had to _ train services due to flooding. *suspend
+(1) The bridge relies on heavy steel _ cables for support. *suspension
+(1) The student was _ for violating the honor code. *suspended
+(1) We will _ the meeting until everyone arrives. *suspend
+
+(1) The theater was _ packed with thousands of excited fans. *literally
+(1) Idioms should not be interpreted in a _ manner. *literal
+(1) She _ ran out of breath trying to catch the bus. *literally
+(1) The translator provided a _ translation of the ancient text. *literal
+(1) His house is _ five minutes away from the ocean. *literally
+(1) The book gives a _ account of historical events. *literal
+(1) I was _ dying of laughter during the comedy show. *literally
+
+(1) The contractor submitted a winning _ for the roadwork. *bid
+(1) Several investors plan to _ on the commercial property. *bid
+(1) The successful _ collected the artwork after the sale. *bidder
+(1) Competitive _ drove the price up far beyond expectations. *bidding
+(1) She placed a higher _ in the final seconds of the auction. *bid
+(1) Companies were invited to _ for the regional contract. *bid
+(1) An anonymous _ offered ten million dollars for the diamond. *bidder
+
+(1) The resort offers a _ view of the turquoise bay. *stunning
+(1) The performance was _ impressive from start to finish. *stunningly
+(1) The unexpected plot twist will _ readers at the end. *stun
+(1) The audience sat _ as the news was announced. *stunned
+(1) She wore a _ evening dress to the gala dinner. *stunning
+(1) The athlete gave a _ accurate demonstration of skill. *stunningly
+(1) I was completely _ by the beauty of the landscape. *stunned
+
+(1) His decision was based _ on logical reasoning. *purely
+(1) The bottle contains _ spring water with no additives. *pure
+(1) Scientists tested the chemical sample to verify its _. *purity
+(1) Special filters are used to _ tap water before drinking. *purify
+(1) The choice to attend the event was _ voluntary. *purely
+(1) She wore a dress made of _ natural silk. *pure
+(1) Plants help _ the air by absorbing harmful toxins. *purify
+
+(1) What conclusions can you _ from these survey results? *infer
+(1) Readers must draw a reasonable _ based on the clues. *inference
+(1) The author's _ meaning was subtle yet profound. *inferred
+(1) It is wrong to _ guilt without clear evidence. *infer
+(1) Logical _ allows scientists to make accurate predictions. *inference
+(1) From his tone, she _ that he was disappointed. *inferred
+(1) We can _ that demand will rise in the coming months. *infer
+
+(1) The bonus program serves as a financial _ for employees. *incentive
+(1) Cities offer tax credits to _ green construction. *incentivize
+(1) A highly _ workforce yields better productivity rates. *incentivized
+(1) There is little _ to work overtime without extra pay. *incentive
+(1) The management aims to _ innovation across all teams. *incentivize
+(1) Special discounts provide an _ for customers to return. *incentive
+(1) Employees feel _ when their hard work is recognized. *incentivized
+
+(1) Social media offers _ access to breaking news. *instant
+(1) The emergency alert sent notification _ to all phones. *instantly
+(1) Can you cite a specific _ of rule violation? *instance
+(1) The new mobile app became an _ success worldwide. *instant
+(1) The chef replied _ when asked about the recipe. *instantly
+(1) In many _, software updates resolve security bugs. *instances
+(1) The medication provided _ relief from the sharp pain. *instant
+
+(1) Students learn effectively through _ review activities. *peer
+(1) The child _ through the hole in the wooden fence. *peered
+(1) She presented her research findings to her industry _. *peers
+(1) Teenagers often value the opinion of their _. *peers
+(1) He _ into the dark microscope lens to inspect the cell. *peered
+(1) Working with _ encourages collaborative problem solving. *peers
+(1) The detective _ closely at the footprints on the floor. *peered
+
+(1) The antique dealer confirmed the vase was _. *genuine
+(1) She was _ happy to see her old school friend. *genuinely
+(1) Nobody doubted the _ of his emotional apology. *genuineness
+(1) They built a business based on _ customer care. *genuine
+(1) He appeared _ surprised by the secret birthday party. *genuinely
+(1) Always check for a certificate of _ when buying art. *genuineness
+(1) She showed a _ interest in learning new skills. *genuine
+
+(1) The coal _ wore heavy protective gear underground. *miner
+(1) Workers entered the copper _ early in the morning. *mine
+(1) Companies plan to _ lithium in the salt flats. *mine
+(1) Modern _ equipment has improved worker safety. *mining
+(1) Rescue teams helped save the trapped _. *miners
+(1) The region is famous for silver _ operations. *mining
+(1) An abandoned coal _ was converted into a museum. *mine
+
+(1) The sunset over the Mediterranean was absolutely _. *gorgeous
+(1) The venue was _ decorated for the holiday banquet. *gorgeously
+(1) They went for a walk on a _ autumn morning. *gorgeous
+(1) The pastry chef created a _ designed wedding cake. *gorgeously
+(1) She wore a _ dress to the film festival premiere. *gorgeous
+(1) The garden bloomed _ in the warm spring sunshine. *gorgeously
+(1) What a _ view from the balcony of this hotel! *gorgeous
+
+(1) The village is famous for its _ narrow stone streets. *charming
+(1) His natural _ helped him win the audience's support. *charm
+(1) The host managed to _ all the international guests. *charm
+(1) The old house was _ decorated with vintage art. *charmingly
+(1) She is a _ host who makes everyone feel at ease. *charming
+(1) The antique shop had a unique historical _. *charm
+(1) The children smiled _ at the visiting grandparents. *charmingly
+
+(1) He chose to _ his mistake to the manager. *confess
+(1) The suspect signed a written _ at the station. *confession
+(1) She is a _ lover of classical literature. *confessed
+(1) I must _ that I haven't finished reading the report. *confess
+(1) The priest heard his _ during the afternoon service. *confession
+(1) He _ to taking the missing documents by accident. *confessed
+(1) It takes courage to _ when you have made an error. *confess
+
+(1) Please fill out the application form in black _. *ink
+(1) The executives _ the merger agreement yesterday. *inked
+(1) The fountain pen ran out of _ mid-sentence. *ink
+(1) He showed off his newly _ shoulder tattoo. *inked
+(1) Be careful not to smudge the wet _ on the page. *ink
+(1) The representative _ the endorsement contract today. *inked
+(1) The printer cartridge needs fresh _ to function properly. *ink
+
+(1) Analysts _ a rise in consumer spending next month. *anticipate
+(1) The crowd waited in eager _ for the concert to start. *anticipation
+(1) The long _ game was released to global acclaim. *anticipated
+(1) We did not _ such severe weather during the trip. *anticipate
+(1) Excitement grew in _ of the holiday festival. *anticipation
+(1) The movie achieved higher sales than originally _. *anticipated
+(1) Good managers _ potential obstacles before they arise. *anticipate
+
+(1) Heavy rain and cold wind made the outdoor trip _. *miserable
+(1) The business expansion failed _, costing millions. *miserably
+(1) Prolonged drought caused immense _ for farmers. *misery
+(1) He felt _ after losing his wallet on the train. *miserable
+(1) The team performed _, losing by a massive margin. *miserably
+(1) Relief efforts aimed to end the suffering and _. *misery
+(1) Sitting in traffic for three hours was a _ experience. *miserable

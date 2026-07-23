@@ -1,0 +1,145 @@
+one → Write the word in the language you want to learn. (Example: I wrote it in English because I want to learn English.)
+bir, tek → Write the main equivalent(s) in your native language. If there is more than one common equivalent, you can list them side by side. (Example: I wrote them in Turkish because Turkish is my native language.)
+You can also use this word as "one," "someone," "somebody," "any," etc. → This note is optional and will only be shown on the flashcard.
+I bought one apple. → This note is optional and will only be shown on the flashcard.
+(blank line) → Always leave one blank line before entering the next word
+two
+iki
+
+three
+üç
+
+four
+dört
+
+five
+beş
+
+six
+altı
+
+seven
+yedi
+
+eight
+sekiz
+
+nine
+dokuz
+
+ten
+on
+
+eleven
+on bir
+
+twelve
+on iki
+
+thirteen
+on üç
+
+fourteen
+on dört
+
+fifteen
+on beş
+
+sixteen
+on altı
+
+seventeen
+on yedi
+
+eighteen
+on sekiz
+
+nineteen
+on dokuz
+
+twenty
+yirmi
+
+twenty-one
+yirmi bir
+
+twenty-two
+yirmi iki
+
+twenty-three
+yirmi üç
+
+twenty-four
+yirmi dört
+
+twenty-five
+yirmi beş
+
+twenty-six
+yirmi altı
+
+twenty-seven
+yirmi yedi
+
+twenty-eight
+yirmi sekiz
+
+twenty-nine
+yirmi dokuz
+
+thirty
+otuz
+
+thirty-one
+otuz bir
+
+thirty-two
+otuz iki
+
+thirty-three
+otuz üç
+
+thirty-four
+otuz dört
+
+thirty-five
+otuz beş
+
+thirty-six
+otuz altı
+
+thirty-seven
+otuz yedi
+
+thirty-eight
+otuz sekiz
+
+thirty-nine
+otuz dokuz
+
+forty
+kırk
+
+forty-one
+kırk bir
+
+forty-two
+kırk iki
+
+forty-three
+kırk üç
+
+forty-four
+kırk dört
+
+forty-five
+kırk beş
+
+forty-six
+kırk altı
+
+forty-seven
+kırk yedi
+
+forty-eight
+kırk sekiz

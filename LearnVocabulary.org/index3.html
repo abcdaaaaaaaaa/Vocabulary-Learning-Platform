@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gap Filling Platform helps you practice context-based vocabulary through interactive gap filling.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="LearnVocabulary">
+<meta name="keywords" content="gap filling platform, gap filling, gap filling questions, vocabulary learning, English vocabulary, language learning, study platform">
+<meta property="og:title" content="Gap Filling Platform | Learn Vocabulary Easily">
+<meta property="og:description" content="Solidify your knowledge through context. Practice reading comprehension and grammar integration by placing the correct word forms into real-world sentences and paragraphs.">
+<meta property="og:image" content="https://learnvocabulary.org/learn.ico">
+<meta property="og:url" content="https://learnvocabulary.org/gap-filling">
+<meta property="og:type" content="website">
+<title>Learn Vocabulary Easily - 3</title>
+<link rel="shortcut icon" href="learn.ico">
+<link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    
+<div class="progress-bar-container"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="container">
+    <h1>Gap Filling Platform</h1>
+    
+    <div class="controls">
+        <div id="fileUploadWrapper" style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+            <label class="small" id="fileLabel">
+                <input id="file" type="file" accept=".txt">
+            </label>
+            <a href="/example3.txt" download="example3.txt" id="exampleLink" style="display: inline; font-size: 13px; color: var(--text-sec); text-decoration: underline; cursor: pointer; transition: 0.3s;">Click here for an example3.txt file</a>
+        </div>
+        
+        <select id="themeSel">
+            <option value="light">Light Theme</option>
+            <option value="dark">Dark Theme</option>
+            <option value="space" selected>Space Theme</option>
+            <option value="submarine">Submarine Theme</option>
+            <option value="ice">Ice Theme</option>
+            <option value="ocean">Ocean Theme</option>
+            <option value="nature">Nature Theme</option>
+            <option value="carrot">Carrot Theme</option>
+            <option value="cotton">Cotton Theme</option>
+        </select>
+        
+        <select id="period" style="display:none">
+            <option value="6">6 Words / Set</option>
+            <option value="9">9 Words / Set</option>
+            <option value="12">12 Words / Set</option>
+        </select>
+        
+        <div id="switchBox" style="display:none">
+            <label class="switch">
+                <input type="checkbox" id="musicSwitch" checked>
+                <span class="slider"></span><span class="label">Correct Sound</span>
+            </label>
+        </div>
+        
+        <button id="start" style="display:none">Start</button>
+        <button id="reset" style="display:none">Reset</button>
+    </div>
+    
+    <div class="progress" id="progress"></div>
+    
+    <div id="quiz" style="display:none">
+        <div class="card">
+            <div class="progress" id="counter" style="font-weight: bold; font-size: 16px; margin-bottom: 10px;"></div>
+            
+            <div id="wordBank" class="word-bank"></div>
+            
+            <div id="sentencesArea" class="sentences-area"></div>
+            
+            <div style="text-align:center; margin-top: 20px;">
+                <button id="nextBatchBtn" class="primary-btn" style="display:none; width: 100%; max-width: 300px; padding: 12px; font-size: 16px;">I Learned and Practiced</button>
+            </div>
+            
+            <div class="footer">
+                <div class="note" id="result"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<audio id="correctSound" src="correctSound.mp3"></audio>
+<audio id="finishBatchSound" src="finishBatchSound.mp3"></audio>
+<audio id="finishAllSound" src="finishAllSound.mp3"></audio>
+
+<script src="script3.js"></script>
+</body>
+</html>

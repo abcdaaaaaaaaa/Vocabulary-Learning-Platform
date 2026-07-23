@@ -1,0 +1,119 @@
+auction (n), auction (v), auctioned (v) → Write the equivalents of the word in the language you want to learn, separated by commas, and indicate its form (noun, adjective, adverb, etc.) in parentheses. (Example: I wrote it in English because I want to learn English.)
+açık artırma (isim), açık artırmayla satmak (fiil), açık artırmayla satıldı (fiil) → Write the equivalents of the word in its original language, separated by commas, and indicate its form (noun, adjective, adverb, etc.) in parentheses. (Example: I wrote them in Turkish because Turkish is my native language.)
+(1) The antique painting was sold at _. (auction) *auction → If you want to get different questions when you press the restart button after finishing the activity, you can increase the variety of questions. For example, since (1) is written 3 times here, the system will repeat after restarting 3 times.
+(1) They decided to _ off their old furniture. (auction) *auction → Answers can be written as *answer1 after the asterisk (*) or as *answer1, answer2, answer(n) for multiple answers if the question contains more than one space.
+(1) The rare stamp was _ for a million dollars. (auction) I bought this vintage watch at a local _. (auction) *auctioned, auction → You can prepare the questions sentence by sentence or paragraph by paragraph.
+(2) The charity _ raised a lot of money for the hospital. (auction) *auction
+(2) We are planning to _ the property next month. (auction) *auction
+(3) She bid on a beautiful necklace during the _. (auction) *auction → Since the third question has only one alternative, the system will display this question every time it runs.
+(4) The museum plans to _ some duplicate artifacts to raise funds. (auction) *auction  → In the activity, generate as many sentence numbers as you want for each word. For example, since this word is written up to number (4), the system will generate 4 different questions.
+(blank line) → Always leave one blank line before entering the next word
+spectacular (adj), spectacularly (adv) → (necessary)
+muhteşem (sıfat), muhteşem bir şekilde (zarf) → (necessary)
+(1) The view from the top of the mountain was absolutely _. (spectacular) *spectacular → (necessary)
+(1) The fireworks display ended _. (spectacular) *spectacularly → (optional)
+(1) It was a _ success that no one anticipated. (spectacular) *spectacular
+(1) The dancers performed _ on stage tonight. (spectacular) *spectacularly
+(1) We witnessed a _ sunset over the ocean. (spectacular) *spectacular
+(1) Her dress looked _ at the evening gala. (spectacular) *spectacular
+(1) The team failed _, losing by fifty points. (spectacular) *spectacularly → We suggest asking one question for each word and creating seven different combinations like the ones shown here for variety.
+
+adequate (adj), adequately (adv), adequacy (n), inadequate (adj)
+yeterli (sıfat), yeterli bir şekilde (zarf), yeterlilik (isim), yetersiz (sıfat)
+(1) Make sure we have an _ supply of water for the trip. (adequate) *adequate
+(1) The students were not _ prepared for the final exam. (adequate) *adequately
+(1) The _ of the security system is currently being reviewed. (adequate) *adequacy
+(1) His explanation for being late was completely _. (adequate) *inadequate
+(1) A small car is _ for my daily commute to work. (adequate) *adequate
+(1) The staff handled the emergency situation _. (adequate) *adequately
+(1) Many families lack _ housing in this region. (adequate) *adequate
+
+bat (n), bat (v), batting (n), batted (v)
+yarasa/sopa (isim), vurmak (fiil), vuruş (isim), vurdu (fiil)
+(1) He swung the baseball _ and hit a home run. (bat) *bat
+(1) We saw a _ flying around in the cave. (bat) *bat
+(1) It is his turn to _ in the next inning. (bat) *bat
+(1) His _ average has improved significantly this season. (bat) *batting
+(1) She _ the ball right over the fence. (bat) *batted
+(1) The vampire turned into a _ and flew away. (bat) *bat
+(1) Grab your _ and let's go play some cricket. (bat) *bat
+
+accomplish (v), accomplished (adj), accomplishment (n)
+başarmak/tamamlamak (fiil), başarılı/yetenekli (sıfat), başarı (isim)
+(1) We can _ a lot more if we work together as a team. (accomplish) *accomplish
+(1) She is a highly _ musician who plays three instruments. (accomplish) *accomplished
+(1) Winning the championship was his greatest _. (accomplish) *accomplishment
+(1) I didn't _ much today because I was feeling sick. (accomplish) *accomplish
+(1) It takes hard work and dedication to _ your goals. (accomplish) *accomplish
+(1) The sense of _ after finishing the marathon was incredible. (accomplish) *accomplishment
+(1) As an _ writer, he has published five bestselling novels. (accomplish) *accomplished
+
+landing (n), land (v), landed (v)
+iniş (isim), inmek (fiil), indi (fiil)
+(1) The airplane made a smooth _ despite the strong winds. (landing) *landing
+(1) We expect the flight to _ in approximately thirty minutes. (landing) *land
+(1) The pilot successfully _ the plane on the river. (landing) *landed
+(1) Wait for me at the _ zone when you arrive. (landing) *landing
+(1) The bird _ gracefully on the thin branch. (landing) *landed
+(1) Emergency teams were prepared for a crash _. (landing) *landing
+(1) Where exactly is the helicopter going to _? (landing) *land
+
+margin (n), marginal (adj), marginally (adv)
+kenar/kâr payı (isim), marjinal/sınırda (sıfat), azıcık/hafifçe (zarf)
+(1) Please leave a wide _ on the left side of your essay. (margin) *margin
+(1) The company's profit _ increased by ten percent this year. (margin) *margin
+(1) There is only a _ difference between the two products. (margin) *marginal
+(1) The new medication is only _ more effective than the old one. (margin) *marginally
+(1) He won the election by a very narrow _. (margin) *margin
+(1) Write your notes in the _ of the textbook. (margin) *margin
+(1) This project is of _ interest to our main business goals. (margin) *marginal
+
+comprehensive (adj), comprehensively (adv), comprehensiveness (n)
+kapsamlı (sıfat), kapsamlı bir şekilde (zarf), kapsamlılık/genişlik (isim)
+(1) We need to conduct a _ review of our current policies. (comprehensive) *comprehensive
+(1) The report covers the issue _, leaving no detail out. (comprehensive) *comprehensively
+(1) She offers a _ guide to learning English grammar. (comprehensive) *comprehensive
+(1) The _ of the training program impressed all the new employees. (comprehensive) *comprehensiveness
+(1) The insurance policy provides _ coverage for your vehicle. (comprehensive) *comprehensive
+(1) They were _ defeated in the final match. (comprehensive) *comprehensively
+(1) We must build a _ list of all possible risks. (comprehensive) *comprehensive
+
+composer (n), compose (v), composed (adj), composition (n)
+besteci (isim), bestelemek (fiil), sakin/bestelenmiş (sıfat), beste/kompozisyon (isim)
+(1) Mozart is considered one of the greatest _ of all time. (composer) *composers
+(1) He likes to _ his own music in his free time. (composer) *compose
+(1) She remained perfectly _ during the stressful interview. (composer) *composed
+(1) This beautiful _ was written in the 18th century. (composer) *composition
+(1) The famous _ conducted the orchestra himself. (composer) *composer
+(1) It took him years to _ this incredible symphony. (composer) *compose
+(1) The photography student learned about lighting and _. (composer) *composition
+
+joint (n), joint (adj), jointly (adv)
+eklem/ortak (isim), ortak (sıfat), ortaklaşa (zarf)
+(1) The doctor checked the mobility of my knee _. (joint) *joint
+(1) The two companies agreed on a _ venture. (joint) *joint
+(1) The report was produced _ by several different departments. (joint) *jointly
+(1) As we age, we often experience pain in our _. (joint) *joints
+(1) They made a _ decision to sell the family business. (joint) *joint
+(1) The project is being funded _ by the government and private investors. (joint) *jointly
+(1) They opened a _ bank account after getting married. (joint) *joint
+
+magnificent (adj), magnificently (adv), magnificence (n)
+muhteşem (sıfat), muhteşem bir şekilde (zarf), ihtişam (isim)
+(1) We stayed in a _ hotel overlooking the ocean. (magnificent) *magnificent
+(1) The royal palace was _ decorated for the grand ball. (magnificent) *magnificently
+(1) Visitors are always awed by the _ of the ancient cathedral. (magnificent) *magnificence
+(1) The actor delivered a _ performance in his latest film. (magnificent) *magnificent
+(1) The sun set _, painting the sky in gold and purple. (magnificent) *magnificently
+(1) She wore a _ diamond necklace to the awards ceremony. (magnificent) *magnificent
+(1) The sheer _ of the mountains took our breath away. (magnificent) *magnificence
+
+remarkable (adj), remarkably (adv)
+dikkat çekici (sıfat), dikkat çekici bir şekilde (zarf)
+(1) It is _ that she survived such a terrible accident. (remarkable) *remarkable
+(1) The patient has recovered _ fast after the surgery. (remarkable) *remarkably
+(1) He has a _ memory and never forgets a face. (remarkable) *remarkable
+(1) The weather has been _ warm for this time of year. (remarkable) *remarkably
+(1) The team's turnaround this season has been nothing short of _. (remarkable) *remarkable
+(1) She played the piano _ well for a beginner. (remarkable) *remarkably
+(1) This is a _ achievement for someone so young. (remarkable) *remarkable
